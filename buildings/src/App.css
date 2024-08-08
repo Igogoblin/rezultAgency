@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Jost";
+  src: url("./font/Jost-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Jost", sans-serif;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+:root {
+  --white: #ffffff;
+
+  --beige100: #e1af93;
+  --beige70: #eac784;
+  --beige40: #f3dfd4;
+  --beige120: #b48c76;
+
+  --black100: #333333;
+  --black60: #858585;
+  --black20: #d6d6d6;
+  --label: #b3b3b3;
+  --stroke: #eaeaea;
+
+  --grey: #f7f7f7;
+  --blue: #edf3f5;
+
+  --red: #ff4f4f;
+}
