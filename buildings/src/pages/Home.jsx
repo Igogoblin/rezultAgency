@@ -1,11 +1,14 @@
-import React from "react";
 import Header from "../components/header/Header";
+import FirstScreen from "../components/firstScreen/FirstScreen";
+import Investments from "../components/investments/Investments";
 
 function Home() {
   return (
-    <div>
+    <main>
       <Header />
-    </div>
+      <FirstScreen />
+      <Investments />
+    </main>
   );
 }
 

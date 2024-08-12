@@ -6,7 +6,6 @@
 }
 body {
   font-family: "Jost", sans-serif;
-  max-width: 1920px;
   margin: 0 auto;
 }
 :root {
@@ -27,4 +26,15 @@ body {
   --blue: #edf3f5;
 
   --red: #ff4f4f;
+}
+main {
+  width: 100%;
+}
+h2 {
+  font-size: 55px;
+  line-height: 70px;
+}
+p {
+  font-size: 20px;
+  /* line-height: 23px; */
 }
