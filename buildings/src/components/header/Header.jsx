@@ -3,6 +3,7 @@ import search from "../../assets/icon/ep_search.svg";
 import heart from "../../assets/icon/hearts.svg";
 import call from "../../assets/icon/phoneWhite.svg";
 import arrowDown from "../../assets/icon/arrowDown.svg";
+import burger from "../../assets/icon/BurgerCall.svg";
 import "./Header.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../store/language";
@@ -42,6 +43,9 @@ function Header() {
           >
             {language === 0 ? "Ru" : "Eng"}{" "}
             <img src={arrowDown} alt="language change" />
+          </div>
+          <div className="top-controls__button burger">
+            <img src={burger} alt="burger" />
           </div>
         </div>
       </div>
