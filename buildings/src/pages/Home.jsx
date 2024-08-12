@@ -1,6 +1,7 @@
 import Header from "../components/header/Header";
-import FirstScreen from "../components/firstScreen/FirstScreen";
-import Investments from "../components/investments/Investments";
+import FirstScreen from "../components/home/firstScreen/FirstScreen";
+import Investments from "../components/home/investments/Investments";
+import Property from "../components/home/property/Property";
 
 function Home() {
   return (
@@ -8,6 +9,7 @@ function Home() {
       <Header />
       <FirstScreen />
       <Investments />
+      <Property />
     </main>
   );
 }

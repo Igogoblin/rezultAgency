@@ -1,8 +1,9 @@
-import "./Investments.scss";
-import invest1 from "../../assets/img/investment1.png";
-import invest2 from "../../assets/img/investment2.png";
-import Button from "../button/Button";
 import { useSelector } from "react-redux";
+import useWindowSize from "../../../store/window";
+import "./Investments.scss";
+import invest1 from "../../../assets/img/investment1.png";
+import invest2 from "../../../assets/img/investment2.png";
+import Button from "../../button/Button";
 
 const INVESTTEXT = [
   {
@@ -26,6 +27,7 @@ const INVESTTEXT = [
 ];
 function Investments() {
   const language = useSelector((state) => state.language);
+  const { width } = useWindowSize();
   return (
     <section className="invest">
       <div className="wrapper">
@@ -35,12 +37,20 @@ function Investments() {
           {INVESTTEXT[language].subtitle.map((item, index) => {
             return <p key={index}>{item}</p>;
           })}
+          {width <= 768 && (
+            <div className="invest-image">
+              <img src={invest1} alt="building" className="invest-img1" />
+              <img src={invest2} alt="building" className="invest-img2" />
+            </div>
+          )}
           <Button text="Подробнее" />
         </div>
-        <div className="invest-image">
-          <img src={invest1} alt="building" className="invest-img1" />
-          <img src={invest2} alt="building" className="invest-img2" />
-        </div>
+        {width > 768 && (
+          <div className="invest-image">
+            <img src={invest1} alt="building" className="invest-img1" />
+            <img src={invest2} alt="building" className="invest-img2" />
+          </div>
+        )}
       </div>
     </section>
   );

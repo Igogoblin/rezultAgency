@@ -18,11 +18,12 @@ function Header() {
         <nav>
           <ul>
             <li>
-              Услуги <img src={arrowDown} alt="on the pages" />
+              {language === 0 ? "Услуги" : "Services"}{" "}
+              <img src={arrowDown} alt="on the pages" />
             </li>
-            <li>О нас</li>
-            <li>Блог</li>
-            <li>Контакты</li>
+            <li>{language === 0 ? "О нас" : "About us"}</li>
+            <li>{language === 0 ? "Блог" : "Blog"}</li>
+            <li>{language === 0 ? "Контакты" : "Contacts"}</li>
           </ul>
         </nav>
         <div className="top-controls">
