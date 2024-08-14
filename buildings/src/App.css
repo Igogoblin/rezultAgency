@@ -33,6 +33,11 @@ main {
 h2 {
   font-size: 55px;
   line-height: 70px;
+  span {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 70px;
+  }
 }
 h3 {
   font-size: 35px;
@@ -46,12 +51,20 @@ h4 {
   h2 {
     font-size: 45px;
     line-height: 50px;
+    span {
+      font-size: 45px;
+      line-height: 50px;
+    }
   }
 }
 @media screen and (max-width: 500px) {
   h2 {
     font-size: 30px;
     line-height: 38px;
+    span {
+      font-size: 30px;
+      line-height: 38px;
+    }
   }
 }
 p {

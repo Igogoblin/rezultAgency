@@ -31,30 +31,160 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        .about__company__title {
+          height: 50px;
+          // gap: 120px;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 28.9px;
+          color: var(--black60);
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          border-bottom: 1px solid var(--stroke);
+          cursor: pointer;
+        }
+        .about__company__title span {
+          height: 100%;
+        }
+        .about__company__title .active {
+          // width: 30%;
+          font-weight: 600;
+          color: var(--beige100);
+          border-bottom: 2px solid var(--beige100);
+        }
+        .about__company__subtitle p:nth-child(1) {
+          margin-bottom: 20px;
+        }
       }
-      .about__company__title {
-        height: 50px;
-        gap: 120px;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 28.9px;
-        color: var(--black60);
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        border-bottom: 1px solid var(--stroke);
-        cursor: pointer;
+      .about__company__slider {
+        width: 100%;
+        height: 579px;
+
+        img {
+          max-width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
-      .about__company__title span {
-        height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-company {
+    width: 100%;
+    height: 1378px;
+    .wrapper {
+      max-width: calc(100% - 40px);
+      .about-company__area {
+        height: 878px;
+
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        // flex-direction: column;
+        h2 {
+          width: 100%;
+          height: 100px;
+          span {
+            font-size: 45px;
+            line-height: 50px;
+          }
+        }
+
+        .about__company__text {
+          max-width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .about__company__title {
+            height: 50px;
+            // gap: 120px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28.9px;
+            color: var(--black60);
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            border-bottom: 1px solid var(--stroke);
+            cursor: pointer;
+          }
+          .about__company__title span {
+            height: 50px;
+          }
+          .about__company__title .active {
+            // width: 30%;
+            font-weight: 600;
+            color: var(--beige100);
+            border-bottom: 2px solid var(--beige100);
+          }
+          .about__company__subtitle p:nth-child(1) {
+            margin-bottom: 20px;
+          }
+        }
+        .about__company__slider {
+          width: 100%;
+          height: 579px;
+
+          img {
+            max-width: 100%;
+            height: 454px;
+            object-fit: cover;
+          }
+        }
       }
-      .about__company__title .active {
-        font-weight: 600;
-        color: var(--beige100);
-        border-bottom: 2px solid var(--beige100);
-      }
-      .about__company__subtitle p:nth-child(1) {
-        margin-bottom: 20px;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .about-company {
+    width: 100%;
+    height: 970px;
+    .wrapper {
+      max-width: calc(100% - 16px);
+      .about-company__area {
+        height: 670px;
+
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 35px;
+        // flex-direction: column;
+        h2 {
+          width: 100%;
+          height: 100px;
+          span {
+            font-size: 45px;
+            line-height: 50px;
+          }
+        }
+
+        .about__company__text {
+          max-width: 100%;
+          gap: 16px;
+
+          .about__company__title {
+            height: 50px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23.12px;
+          }
+          .about__company__title span {
+            height: 50px;
+          }
+        }
+        .about__company__slider {
+          width: 100%;
+          height: 579px;
+
+          img {
+            max-width: 100%;
+            height: 240px;
+          }
+        }
       }
     }
   }

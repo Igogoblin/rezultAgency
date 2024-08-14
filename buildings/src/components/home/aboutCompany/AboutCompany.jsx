@@ -62,7 +62,8 @@ function AboutCompany() {
       <div className="wrapper">
         <div className="about-company__area">
           <h2>
-            О компании<br></br>
+            {language === 0 ? "О компании" : "About company"}
+            <br></br>
             <span>RMC DE LUXE</span>
           </h2>
           <div className="about__company__text">
@@ -87,7 +88,7 @@ function AboutCompany() {
               )}
             </div>
           </div>
-          <div className="about-company__slider">
+          <div className="about__company__slider">
             <img src={aboutCompany1} alt="company building" />
           </div>
         </div>
