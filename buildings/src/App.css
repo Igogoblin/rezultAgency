@@ -6,7 +6,6 @@
 }
 body {
   font-family: "Jost", sans-serif;
-  max-width: 1920px;
   margin: 0 auto;
 }
 :root {
@@ -27,4 +26,91 @@ body {
   --blue: #edf3f5;
 
   --red: #ff4f4f;
+}
+main {
+  width: 100%;
+}
+h2 {
+  font-size: 55px;
+  line-height: 70px;
+  span {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 70px;
+  }
+}
+h3 {
+  font-size: 35px;
+  line-height: 51px;
+}
+h4 {
+  font-size: 30px;
+  line-height: 36px;
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 45px;
+    line-height: 50px;
+    span {
+      font-size: 45px;
+      line-height: 50px;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  h2 {
+    font-size: 30px;
+    line-height: 38px;
+    span {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+}
+p {
+  font-size: 20px;
+  line-height: auto;
+  /* line-height: 23px; */
+}
+@media screen and (max-width: 500px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  .wrapper {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 30px;
+    .logo {
+      width: 177px;
+      height: 60px;
+    }
+    .er-area {
+      color: var(--white);
+      p {
+        margin: 20px 0;
+      }
+    }
+  }
+  .error-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
 }

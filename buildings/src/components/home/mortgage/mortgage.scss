@@ -1,0 +1,255 @@
+.mortgage {
+  width: 100%;
+  height: 671px;
+  .wrapper {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    .mortgage__area {
+      width: 100%;
+      height: 471px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: start;
+
+      .mortgage__calc {
+        width: 100%;
+        height: 361px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #eaeaea;
+        -webkit-box-shadow: 4px 4px 4px 4px rgba(34, 60, 80, 0.05);
+        -moz-box-shadow: 4px 4px 4px 4px rgba(34, 60, 80, 0.05);
+        box-shadow: 4px 4px 4px 4px rgba(34, 60, 80, 0.05);
+        padding: 40px;
+        .mortgage__form {
+          max-width: 790px;
+          width: 100%;
+          height: 281px;
+          display: flex;
+          justify-content: start;
+          flex-wrap: wrap;
+          gap: 40px;
+          input {
+            max-width: 350px;
+            width: 100%;
+            height: 50px;
+            border: 1px solid #eaeaea;
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.05);
+            padding: 12px 16px;
+            margin: 10px 0 0 0;
+          }
+          input:focus {
+            border: 1px solid var(--beige100);
+          }
+          .input-wrapper:focus-within label {
+            color: var(--beige100);
+          }
+        }
+
+        .mortgage__form div {
+          width: 350px;
+          height: 81px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+      .mortgage__calc__check {
+        max-width: 487px;
+        width: 100%;
+        height: 192px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+        border-left: 1px solid #eaeaea;
+        padding: 0 0 0 40px;
+        div {
+          width: 218px;
+          height: 62px;
+          p {
+            font-size: 18px;
+            line-height: 26px;
+            color: var(--black60);
+          }
+          span {
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 36.13px;
+            color: var(--black100);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1380px) {
+  .mortgage {
+    width: 100%;
+    height: 671px;
+    .wrapper {
+      max-width: calc(100% - 40px);
+
+      .mortgage__area {
+        width: 100%;
+        height: 643px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: start;
+
+        .mortgage__calc {
+          width: 100%;
+          height: 553px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #eaeaea;
+          box-shadow: 1px 1px rgba(0, 0, 0, 0.05);
+          padding: 40px;
+          .mortgage__form {
+            width: 100%;
+            height: 473px;
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+            gap: 20px;
+            input {
+              max-width: 350px;
+              width: 100%;
+              height: 50px;
+              border: 1px solid #eaeaea;
+              box-shadow: 1px 1px rgba(0, 0, 0, 0.05);
+              padding: 12px 16px;
+              margin: 10px 0 0 0;
+            }
+          }
+
+          .mortgage__form div {
+            width: 350px;
+            height: 81px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+        }
+        .mortgage__calc__check {
+          max-width: 218px;
+          width: 100%;
+          height: 384px;
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          flex-wrap: wrap;
+          border-left: 1px solid #eaeaea;
+          padding: 0 0 0 40px;
+          div {
+            width: 218px;
+            height: 62px;
+            p {
+              font-size: 18px;
+              line-height: 26px;
+              color: var(--black60);
+            }
+            span {
+              font-weight: 500;
+              font-size: 25px;
+              line-height: 36.13px;
+              color: var(--black100);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .mortgage {
+    width: 100%;
+    height: 1091px;
+    .wrapper {
+      max-width: calc(100% - 16px);
+
+      .mortgage__area {
+        width: 100%;
+        height: 891px;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: start;
+        gap: 25px;
+
+        .mortgage__calc {
+          width: 100%;
+          height: 828px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid #eaeaea;
+          box-shadow: 1px 1px rgba(0, 0, 0, 0.05);
+          padding: 24px 20px;
+          .mortgage__form {
+            width: 100%;
+            height: 453px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            flex-wrap: wrap;
+            gap: 20px;
+            input {
+              max-width: 350px;
+              width: 100%;
+              height: 50px;
+              border: 1px solid #eaeaea;
+              box-shadow: 1px 1px rgba(0, 0, 0, 0.05);
+              padding: 12px 16px;
+              margin: 10px 0 0 0;
+            }
+          }
+
+          .mortgage__form div {
+            width: 288px;
+            height: 71px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+        }
+        .mortgage__calc__check {
+          max-width: 288px;
+          width: 100%;
+          height: 296px;
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          flex-wrap: wrap;
+          border-left: 0;
+          padding: 0;
+          margin: 0 auto;
+          div {
+            width: 288px;
+            width: 100%;
+            height: 62px;
+            p {
+              font-size: 18px;
+              line-height: 26px;
+              color: var(--black60);
+            }
+            span {
+              font-weight: 500;
+              font-size: 25px;
+              line-height: 36.13px;
+              color: var(--black100);
+            }
+          }
+        }
+      }
+    }
+  }
+}
