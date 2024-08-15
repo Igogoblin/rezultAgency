@@ -122,14 +122,7 @@ function Header() {
                     language === 0 ? "Введите поисковый запрос..." : "Search..."
                   }
                   className="search-popup__input"
-                >
-                  {/* <img
-                    src={searching}
-                    alt="search"
-                    className="search-popup__close"
-                    onClick={closePopup}
-                  /> */}
-                </input>
+                ></input>
               </div>
               <div className="search-popup__close" onClick={closePopup}>
                 <img src={close} alt="cancel" onClick={closePopup} />

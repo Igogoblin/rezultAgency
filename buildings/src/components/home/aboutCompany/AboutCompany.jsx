@@ -60,13 +60,7 @@ function AboutCompany() {
   function imageSlider() {
     setCurrentImage(currentImage === 1 ? 0 : 1);
   }
-  // const goToPrevious = () => {
-  //   if (currentImage === 0) {
-  //     setCurrentImage(1);
-  //   } else {
-  //     setCurrentImage(0);
-  //   }
-  // };
+
   const handleClick = (index) => {
     setActiveIndex(index);
   };
