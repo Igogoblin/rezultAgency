@@ -7,10 +7,34 @@ import burger from "../../assets/icon/BurgerCall.svg";
 import "./Header.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../store/language";
+import { useEffect, useRef, useState } from "react";
 
 function Header() {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language);
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [isArrowRotated, setIsArrowRotated] = useState(false);
+  const tooltipRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (tooltipRef.current && !tooltipRef.current.contains(event.target)) {
+      setIsVisible(false);
+      setIsArrowRotated(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleButtonClick = () => {
+    setIsVisible(!isVisible);
+    setIsArrowRotated(!isArrowRotated);
+  };
 
   return (
     <header>
@@ -18,13 +42,47 @@ function Header() {
         <img src={logo} alt="logo" />
         <nav>
           <ul>
-            <li>
+            <li className="tooltip-container" onClick={handleButtonClick}>
               {language === 0 ? "Услуги" : "Services"}{" "}
-              <img src={arrowDown} alt="on the pages" />
+              <img
+                src={arrowDown}
+                alt="on the pages"
+                className={`tooltip__arrow ${isArrowRotated ? "rotated" : ""}`}
+              />
+              {isVisible && (
+                <div className="tooltip-box" ref={tooltipRef}>
+                  <a href="#mortgage" onClick={() => setIsVisible(false)}>
+                    {" "}
+                    {language === 0 ? "Купить" : "Buy"}
+                  </a>
+
+                  <a href="#invest" onClick={() => setIsVisible(false)}>
+                    {language === 0 ? "Арендовать" : "Rent"}
+                  </a>
+                  <a href="#invest" onClick={() => setIsVisible(false)}>
+                    {language === 0 ? "Продать" : "Sell"}
+                  </a>
+                  <a href="#mortgage" onClick={() => setIsVisible(false)}>
+                    {language === 0
+                      ? "Оценка недвижимости"
+                      : "Property assessment"}
+                  </a>
+                </div>
+              )}
             </li>
-            <li>{language === 0 ? "О нас" : "About us"}</li>
-            <li>{language === 0 ? "Блог" : "Blog"}</li>
-            <li>{language === 0 ? "Контакты" : "Contacts"}</li>
+
+            <li>
+              <a href="#aboutCompany">
+                {language === 0 ? "О нас" : "About us"}
+              </a>
+            </li>
+
+            <li>
+              <a href="#blog">{language === 0 ? "Блог" : "Blog"}</a>
+            </li>
+            <li>
+              <a href="#contacts">{language === 0 ? "Контакты" : "Contacts"}</a>
+            </li>
           </ul>
         </nav>
         <div className="top-controls">

@@ -106,3 +106,65 @@ header {
     }
   }
 }
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-box {
+  width: 350px;
+  height: 188px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--beige40);
+
+  display: flex;
+  flex-direction: column;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+// .tooltip-box button {
+//   width: 100%;
+//   height: 25%;
+//   background: var(--stroke);
+//   color: white;
+//   border: none;
+//   padding: 5px 10px;
+//   cursor: pointer;
+//   border-radius: 4px;
+//   color: var(--black100);
+//   text-align: start;
+//   font-weight: 400;
+//   font-size: 18px;
+//   line-height: 26px;
+// }
+.tooltip-box a {
+  width: 100%;
+  height: 25%;
+  background: var(--stroke);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: var(--black100);
+  text-align: start;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 10px;
+}
+.tooltip-box a:hover {
+  background: var(--beige40);
+  color: var(--beige100);
+}
+.tooltip__arrow {
+  transition: transform 0.3s ease-in-out;
+}
+.tooltip__arrow.rotated {
+  transform: rotate(180deg);
+}

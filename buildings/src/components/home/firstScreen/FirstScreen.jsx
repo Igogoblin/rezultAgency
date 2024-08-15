@@ -21,7 +21,7 @@ function FirstScreen() {
         <div className="first-screen__area">
           <h1>{FIRSTSCREEN[language].title}</h1>
           <p>{FIRSTSCREEN[language].subtitle}</p>
-          <Button text="Подробнее" />
+          <Button text={language === 0 ? "Подробнее" : "Learn more"} />
         </div>
         <div className="slide-area">
           <div className="slide left">

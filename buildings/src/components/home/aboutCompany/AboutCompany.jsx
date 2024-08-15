@@ -58,7 +58,7 @@ function AboutCompany() {
     setActiveIndex(index);
   };
   return (
-    <section className="about-company">
+    <section className="about-company" id="aboutCompany">
       <div className="wrapper">
         <div className="about-company__area">
           <h2>

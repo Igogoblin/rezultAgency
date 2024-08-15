@@ -29,7 +29,7 @@ function Investments() {
   const language = useSelector((state) => state.language);
   const { width } = useWindowSize();
   return (
-    <section className="invest">
+    <section className="invest" id="invest">
       <div className="wrapper">
         <div className="invest-text">
           <h2>{INVESTTEXT[language].title}</h2>
@@ -43,7 +43,7 @@ function Investments() {
               <img src={invest2} alt="building" className="invest-img2" />
             </div>
           )}
-          <Button text="Подробнее" />
+          <Button text={language === 0 ? "Подробнее" : "Learn more"} />
         </div>
         {width > 768 && (
           <div className="invest-image">
