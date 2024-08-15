@@ -42,6 +42,9 @@ function Header() {
     setIsVisible(!isVisible);
     setIsArrowRotated(!isArrowRotated);
   };
+  const handleSearch = () => {
+    setIsSearch(!isSearch);
+  };
   const closePopup = () => {
     setIsSearch(false);
   };
@@ -99,11 +102,15 @@ function Header() {
           </ul>
         </nav>
         <div className="top-controls">
-          <div className="top-controls__button">
+          <div className="top-controls__button" onClick={handleSearch}>
             <img src={search} alt="search" />
           </div>
           {isSearch && (
-            <div className="search-container" ref={tooltipRef}>
+            <div
+              className="search-container"
+              ref={tooltipRef}
+              onClick={closePopup}
+            >
               <div
                 className="search-popup__content"
                 onClick={(e) => e.stopPropagation()}
@@ -114,12 +121,18 @@ function Header() {
                     language === 0 ? "Введите поисковый запрос..." : "Search..."
                   }
                   className="search-popup__input"
-                />
+                >
+                  {/* <img
+                    src={searching}
+                    alt="search"
+                    className="search-popup__close"
+                    onClick={closePopup}
+                  /> */}
+                </input>
               </div>
               <div className="search-popup__close" onClick={closePopup}>
-                <img src={searching} alt="search" />
+                <img src={close} alt="cancel" onClick={closePopup} />
               </div>
-              <img src={close} alt="cancel" onClick={closePopup} />
             </div>
           )}
           <div className="top-controls__button">
