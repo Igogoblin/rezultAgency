@@ -132,7 +132,7 @@ function Header() {
           <div
             className="top-controls__button"
             onClick={() => setIsHeart(!isHeart)}
-            style={isHeart ? { background: "red" } : { background: "white" }}
+            style={isHeart ? { background: "beige" } : { background: "white" }}
           >
             <img src={heart} alt="heart" />
           </div>
