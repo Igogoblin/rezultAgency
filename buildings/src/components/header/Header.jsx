@@ -8,7 +8,7 @@ import "./Header.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../store/language";
 import { useEffect, useRef, useState } from "react";
-import searching from "../../assets/icon/ep_search.svg";
+// import searching from "../../assets/icon/ep_search.svg";
 import close from "../../assets/icon/closet.svg";
 // import SearchPopup from "../search/SearchPopup";
 
@@ -19,6 +19,7 @@ function Header() {
   const [isVisible, setIsVisible] = useState(false);
   const [isArrowRotated, setIsArrowRotated] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
+  const [isHeart, setIsHeart] = useState(false);
   const tooltipRef = useRef(null);
 
   const handleClickOutside = (event) => {
@@ -135,7 +136,11 @@ function Header() {
               </div>
             </div>
           )}
-          <div className="top-controls__button">
+          <div
+            className="top-controls__button"
+            onClick={() => setIsHeart(!isHeart)}
+            style={isHeart ? { background: "red" } : { background: "white" }}
+          >
             <img src={heart} alt="heart" />
           </div>
           <div className="top-controls__button callUs">
