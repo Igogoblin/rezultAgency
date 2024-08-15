@@ -43,7 +43,10 @@ function Investments() {
               <img src={invest2} alt="building" className="invest-img2" />
             </div>
           )}
-          <Button text={language === 0 ? "Подробнее" : "Learn more"} />
+          <Button
+            text={language === 0 ? "Подробнее" : "Learn more"}
+            link="/invest/"
+          />
         </div>
         {width > 768 && (
           <div className="invest-image">

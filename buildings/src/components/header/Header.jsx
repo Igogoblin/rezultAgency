@@ -8,6 +8,9 @@ import "./Header.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../store/language";
 import { useEffect, useRef, useState } from "react";
+import searching from "../../assets/icon/ep_search.svg";
+import close from "../../assets/icon/closet.svg";
+// import SearchPopup from "../search/SearchPopup";
 
 function Header() {
   const dispatch = useDispatch();
@@ -15,12 +18,16 @@ function Header() {
 
   const [isVisible, setIsVisible] = useState(false);
   const [isArrowRotated, setIsArrowRotated] = useState(false);
+  const [isSearch, setIsSearch] = useState(false);
   const tooltipRef = useRef(null);
 
   const handleClickOutside = (event) => {
     if (tooltipRef.current && !tooltipRef.current.contains(event.target)) {
       setIsVisible(false);
       setIsArrowRotated(false);
+    }
+    if (tooltipRef.current && !tooltipRef.current.contains(event.target)) {
+      setIsSearch(false);
     }
   };
 
@@ -35,11 +42,17 @@ function Header() {
     setIsVisible(!isVisible);
     setIsArrowRotated(!isArrowRotated);
   };
+  const closePopup = () => {
+    setIsSearch(false);
+  };
 
   return (
     <header>
       <div className="wrapper">
-        <img src={logo} alt="logo" />
+        <a href="/rezultAgency/">
+          {" "}
+          <img src={logo} alt="logo" />
+        </a>
         <nav>
           <ul>
             <li className="tooltip-container" onClick={handleButtonClick}>
@@ -89,6 +102,26 @@ function Header() {
           <div className="top-controls__button">
             <img src={search} alt="search" />
           </div>
+          {isSearch && (
+            <div className="search-container" ref={tooltipRef}>
+              <div
+                className="search-popup__content"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <input
+                  type="text"
+                  placeholder={
+                    language === 0 ? "Введите поисковый запрос..." : "Search..."
+                  }
+                  className="search-popup__input"
+                />
+              </div>
+              <div className="search-popup__close" onClick={closePopup}>
+                <img src={searching} alt="search" />
+              </div>
+              <img src={close} alt="cancel" onClick={closePopup} />
+            </div>
+          )}
           <div className="top-controls__button">
             <img src={heart} alt="heart" />
           </div>

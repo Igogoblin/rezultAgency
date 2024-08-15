@@ -80,7 +80,10 @@ function Blog() {
               );
             })}
           </div>
-          <Button text={language === 0 ? "Все статьи" : "All articles"} />
+          <Button
+            text={language === 0 ? "Все статьи" : "All articles"}
+            link="/blog/"
+          />
         </div>
       </div>
     </section>

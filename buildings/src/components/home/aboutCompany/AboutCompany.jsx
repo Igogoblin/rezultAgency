@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import "./AboutCompany.scss";
+import arrowRight from "../../../assets/icon/arrowRight.svg";
 import aboutCompany1 from "../../../assets/img/aboutCompanyFirst.png";
-
+import aboutCompany2 from "../../../assets/img/aboutCompanySecond.png";
 const ABOUTCOMPANY = [
   [
     {
@@ -51,9 +52,21 @@ const ABOUTCOMPANY = [
     },
   ],
 ];
+const ABOUTCOMPANYIMAGES = [aboutCompany1, aboutCompany2];
 function AboutCompany() {
   const language = useSelector((state) => state.language);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
+  function imageSlider() {
+    setCurrentImage(currentImage === 1 ? 0 : 1);
+  }
+  // const goToPrevious = () => {
+  //   if (currentImage === 0) {
+  //     setCurrentImage(1);
+  //   } else {
+  //     setCurrentImage(0);
+  //   }
+  // };
   const handleClick = (index) => {
     setActiveIndex(index);
   };
@@ -89,7 +102,18 @@ function AboutCompany() {
             </div>
           </div>
           <div className="about__company__slider">
-            <img src={aboutCompany1} alt="company building" />
+            <img
+              src={ABOUTCOMPANYIMAGES[currentImage]}
+              alt="company building"
+            />
+            <div className="slide-area">
+              <div className="slide left" onClick={imageSlider}>
+                <img src={arrowRight} alt="top to right" />
+              </div>
+              <div className="slide right" onClick={imageSlider}>
+                <img src={arrowRight} alt="top to left" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
