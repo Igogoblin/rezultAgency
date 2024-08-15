@@ -16,6 +16,7 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      padding: 15px;
       .advantages__item {
         width: 30%;
         display: flex;
@@ -41,7 +42,7 @@
 
       .advantages__area {
         width: 100%;
-
+        padding: 0;
         .advantages__item {
           width: 48%;
           gap: 0;
